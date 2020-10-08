@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Checkbox.css';
 
 function Checkbox() {
     const [no_of_options, setno_of_options] = useState(1);
@@ -11,18 +12,18 @@ function Checkbox() {
         <div>
             {Array(no_of_options).fill().map((_,index) => {
                 return (
-                   <React.Fragment key={index}>
+                   <div key={index} className="Option">
                        <input type="checkbox" id="option1" name="option1"/>
                        <label htmlFor="option1">Option1</label>
                        <br/>
-                   </React.Fragment>
+                   </div>
                     
                 )
             }
                 
             )}
             
-            <p onClick={increment}>{no_of_options < 5 ? 'Add option' : null}</p>
+            <p onClick={increment} className="AddOption_Checkbox">{no_of_options < 5 ? 'Add option' : null}</p>
         </div>
     )
 }
