@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
-import FormAnswerType from '../FormAnswerType/FormAnswerType';
+import FormQnA from '../FormQnA/FormQnA';
 import FormHeader from '../FormHeader/FormHeader';
-import FormQuestion from '../FormQuestion/FormQuestion';
+import './Form.css';
 
 class Form extends Component{
 
+    state = {
+        questions: 1
+    }
 
+    addQuestionHandler = () => {
+        console.log('cl')
+        this.setState(prevState => (
+            {questions: prevState.questions + 1}
+        ))
+    }
 
     render(){
+
+        let questions = Array(this.state.questions)
+            .fill()
+            .map((_, index) => <FormQnA addQuestion = {this.addQuestionHandler} key={index}/>)
+
         return (
-            <div>
+            <div className="FormContainer">
                 <FormHeader/>
-                <FormQuestion/>
-                <FormAnswerType/>
+                {questions}
             </div>
             
         )

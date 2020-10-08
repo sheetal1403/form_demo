@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './MultipleChoice.css';
 
 function MultipleChoice() {
 
@@ -12,18 +13,18 @@ function MultipleChoice() {
         <div>
             {Array(no_of_options).fill().map((_,index) => {
                 return (
-                   <React.Fragment key={index}>
+                   <div key={index} className="Option">
                        <input type="radio" id="option1" name="option1"/>
                        <label htmlFor="option1">Option1</label>
                        <br/>
-                   </React.Fragment>
+                   </div >
                     
                 )
             }
                 
             )}
             
-            <p onClick={increment}>{no_of_options < 5 ? 'Add option' : null}</p>
+            <span onClick={increment} className="AddOption">{no_of_options < 5 ? 'Add option' : null}</span>
         </div>
     )
 }

@@ -1,0 +1,38 @@
+.FormHeader{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.FormHeader input{
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.FormHeader input:first-child{
+    height: 50px;
+    font-size: 40px;
+}
+
+.FormHeader input:first-child::placeholder{
+    font-size: 40px;
+}
+
+.FormHeader input:last-child{
+    height: 30px;
+    font-size: 20px;
+}
+
+.FormHeader input:last-child::placeholder{
+    font-size: 20px;
+}
+
+.FormHeader input:focus{
+    outline: none;
+    border-bottom: 3px solid #9b59b6;
+
+}

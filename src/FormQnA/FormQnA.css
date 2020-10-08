@@ -1,0 +1,27 @@
+.QuestionAndAnswerType{
+    display: flex;
+    
+}
+
+.AnswerType{
+    padding: 5px;
+    margin: 0 20px 20px 0;
+}
+
+
+
+.QnAContainer{
+    background-color: white;
+    padding: 20px 10px 10px; 
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+.AddQuestion{
+    display: inline-block;
+    cursor: pointer;
+    margin: 30px 0 20px;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
